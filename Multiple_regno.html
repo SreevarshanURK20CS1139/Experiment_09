@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Q_2.CSS">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script>
+            var app=angular.module("myApp",['ngRoute']);
+            app.config(function($routeProvider){
+                $routeProvider.when('/1139',{
+                templateUrl:'1139.html'
+               })
+               .when('/1138',{
+                templateUrl:'1138.html'
+               })
+               .when('/1154',{
+                templateUrl:'1154.html'
+               })
+               .when('/2113',{
+                templateUrl:'2113.html'
+               })
+    
+            });
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <div class="sidebar" width="20%">
+            <h2>REGISTER NUMBERS</h2>
+            <a href="#!1139"><b>URK20CS1139</b></a>
+            <a href="#!1138"><b>URK20CS1138</b></a>
+            <a href="#!1154"><b>URK20CS1154</b></a>
+            <a href="#!2113"><b>URK20CS2113</b></a>
+        </div>
+        <div class="content" ng-view></div>
+</body>
+</html>
